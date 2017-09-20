@@ -1,0 +1,18 @@
+@import 'fonts.scss';
+@import 'variables.scss';
+
+* {
+  font-family: 'OpenSans', sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+input, button {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+}

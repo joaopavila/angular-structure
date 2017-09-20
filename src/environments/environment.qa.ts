@@ -1,9 +1,9 @@
 export const ENVIRONMENT = {
-  'zupmeApiUrl' : 'https://manager.api.zup.me',
+  'zupmeApiUrl' : 'https://api-manager.qa.api.zup.me',
   'restClientRequestTimeoutInMilliseconds' : 30000,
-  'defaultOrganizationSlug': 'ngbank',
-  'defaultPortalSlug': 'internetbanking',
+  'defaultOrganizationSlug': 'gateway',
+  'defaultPortalSlug': 'santander',
   'elasticsearchMaxSearchRangeDays': 10,
   'elasticsearchMaxSearchDays': 60,
-  production: true
+  production: false
 };
