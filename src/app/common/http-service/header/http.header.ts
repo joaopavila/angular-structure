@@ -16,9 +16,6 @@ export class HeadersHttp extends Http {
 
   private myHeaders() {
     const headers: Headers = new Headers();
-    headers.append('Content-Type', 'application/json;charset=UTF-8');
-    headers.append('X-Organization-Slug', 'gateway');
-    headers.append('X-Developer-Portal-Id', '21');
     return headers;
   }
 }
