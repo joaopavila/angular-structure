@@ -8,6 +8,20 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
+    "baseUrl": "src",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@common/*": ["app/common/*"],
+      "@directives/*": ["app/directives/*"],
+      "@helpers/*": ["app/helpers/*"],
+      "@services/*": ["app/services/*"],
+      "@pipes/*": ["app/common/pipes/*"],
+      "@routes/*": ["app/common/routers/*"],
+      "@components/*": ["app/components/*"],
+      "@containers/*": ["app/containers/*"],
+      "@store/*": ["app/store/*"],
+      "@env/*": ["environments/*"]
+    },
     "typeRoots": [
       "node_modules/@types"
     ],

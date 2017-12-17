@@ -5,10 +5,10 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/finally';
 
-import { HeadersHttp } from '../header/http.header';
-import { ENVIRONMENT } from '../../../../environments/environment';
+import { HeadersHttp } from '@common/http-service/header/http.header';
+import { ENVIRONMENT } from '@env/environment';
 
-const API_URL = ENVIRONMENT.url;
+const API_URL = ENVIRONMENT.baseUrl;
 
 @Injectable()
 export class InterceptedHttp extends Http {
