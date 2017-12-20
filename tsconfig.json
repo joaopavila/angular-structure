@@ -11,15 +11,16 @@
     "baseUrl": "src",
     "paths": {
       "@app/*": ["app/*"],
-      "@common/*": ["app/common/*"],
+      "@core/*": ["app/core/*"],
       "@directives/*": ["app/directives/*"],
-      "@helpers/*": ["app/helpers/*"],
-      "@services/*": ["app/services/*"],
+      "@helpers/*": ["app/common/helpers/*"],
+      "@services/*": ["app/modules/services/*"],
       "@pipes/*": ["app/common/pipes/*"],
-      "@routes/*": ["app/common/routers/*"],
-      "@components/*": ["app/components/*"],
-      "@containers/*": ["app/containers/*"],
-      "@store/*": ["app/store/*"],
+      "@routes/*": ["app/core/routers/*"],
+      "@components/*": ["app/modules/components/*"],
+      "@containers/*": ["app/modules/containers/*"],
+      "@models/*": ["app/modules/models/*"],
+      "@redux/*": ["app/modules/redux/*"],
       "@env/*": ["environments/*"]
     },
     "typeRoots": [
