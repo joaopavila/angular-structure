@@ -1,4 +1,5 @@
 export const ENVIRONMENT = {
   production: false,
-  baseUrl: '/'
+  baseUrl: '/',
+  teste: 'QA'
 };
