@@ -12,15 +12,16 @@
     "paths": {
       "@app/*": ["app/*"],
       "@core/*": ["app/core/*"],
-      "@directives/*": ["app/directives/*"],
-      "@helpers/*": ["app/common/helpers/*"],
+      "@directives/*": ["app/shared/directives/*"],
+      "@helpers/*": ["app/shared/helpers/*"],
       "@services/*": ["app/modules/services/*"],
-      "@pipes/*": ["app/common/pipes/*"],
+      "@pipes/*": ["app/shared/pipes/*"],
       "@routes/*": ["app/core/routers/*"],
       "@components/*": ["app/modules/components/*"],
       "@containers/*": ["app/modules/containers/*"],
       "@models/*": ["app/modules/models/*"],
       "@redux/*": ["app/modules/redux/*"],
+      "@shared/*": ["app/shared/*"],
       "@env/*": ["environments/*"]
     },
     "typeRoots": [

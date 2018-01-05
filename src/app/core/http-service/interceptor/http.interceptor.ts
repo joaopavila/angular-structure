@@ -21,7 +21,6 @@ export class InterceptedHttp extends Http {
   }
 
   request(url: string | Request, options?: RequestOptionsArgs): Observable<any> {
-    // this.showLoader();
 
     if (typeof url === 'string') {
       return this.get(this.baseUrl(url), options); // Recursion: transform url from String to Request
@@ -33,7 +32,6 @@ export class InterceptedHttp extends Http {
   }
 
   get(url: string, options?: RequestOptionsArgs): Observable<any> {
-    // this.showLoader();
 
     return this.sendRequest({ method: RequestMethod.Get, url: this.baseUrl(url) }, options)
       .finally(() => {
@@ -42,8 +40,6 @@ export class InterceptedHttp extends Http {
   }
 
   post(url: string, body: string, options?: RequestOptionsArgs): Observable<any> {
-    // this.showLoader();
-
     return this.sendRequest({ method: RequestMethod.Post, url: this.baseUrl(url), body: body }, options)
       .finally(() => {
         this.onEnd();
@@ -51,7 +47,6 @@ export class InterceptedHttp extends Http {
   }
 
   put(url: string, body: string, options?: RequestOptionsArgs): Observable<any> {
-    // this.showLoader();
     return this.sendRequest({ method: RequestMethod.Put, url: this.baseUrl(url), body: body }, options)
       .finally(() => {
         this.onEnd();
