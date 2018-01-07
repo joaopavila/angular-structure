@@ -6,8 +6,16 @@ export class HttpService {
 
   constructor(private http: Http) { }
 
-  public register(payload: object) {
-    return this.http.post('/developers', payload).map(data => data.json());
+  public registerUser(payload: object) {
+    return this.http.post('/regiserUser', payload).map(data => data.json());
+  }
+
+  public deleteUser(payload: object) {
+    return this.http.post('/deleteUser', payload).map(data => data.json());
+  }
+
+  public updateUser(payload: object) {
+    return this.http.post('/updateUser', payload).map(data => data.json());
   }
 
 }
