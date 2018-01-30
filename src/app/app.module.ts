@@ -3,21 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from '@core/core.module';
-import { SharedModule } from '@shared/shared.module';
-import { ProductComponent } from './product/product.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { ProductModule } from './product/product.module';
+import { HeaderModule } from './header/header.module';
+import { FooterModule } from './footer/footer.module';
+import { HomeModule } from '@app/home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
-    HeaderComponent,
-    FooterComponent
+    ProductModule,
+    HeaderModule,
+    FooterModule,
+    HomeModule
   ],
   imports: [
     BrowserModule,
-    SharedModule,
     CoreModule
   ],
   providers: [],
