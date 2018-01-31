@@ -7,5 +7,5 @@ import { ENVIRONMENT } from '@env/environment';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = ENVIRONMENT.teste;
+  title = ENVIRONMENT.env;
 }

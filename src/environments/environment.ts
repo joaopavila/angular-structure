@@ -6,5 +6,5 @@
 export const ENVIRONMENT = {
   production: true,
   baseUrl: '/',
-  teste: 'PROD'
+  env: 'PROD'
 };
