@@ -4,7 +4,7 @@ import { HomeComponent } from './home.component';
 
 @NgModule({
   imports: [],
-  exports: [],
+  exports: [HomeComponent],
   declarations: [HomeComponent],
   providers: [],
 })

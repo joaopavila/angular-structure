@@ -12,12 +12,11 @@
     "paths": {
       "@app/*": ["app/*"],
       "@core/*": ["app/core/*"],
-      "@services/*": ["app/core/services/*"],
       "@interceptor/*": ["app/core/http-service/*"],
+      "@services/*": ["app/core/services/*"],
       "@directives/*": ["app/shared/directives/*"],
       "@helpers/*": ["app/shared/helpers/*"],
       "@pipes/*": ["app/shared/pipes/*"],
-      "@routes/*": ["app/core/routers/*"],
       "@models/*": ["app/shared/models/*"],
       "@store/*": ["app/store/*"],
       "@shared/*": ["app/shared/*"],
