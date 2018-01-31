@@ -13,7 +13,6 @@
       "@app/*": ["app/*"],
       "@core/*": ["app/core/*"],
       "@interceptor/*": ["app/core/http-service/*"],
-      "@services/*": ["app/core/services/*"],
       "@directives/*": ["app/shared/directives/*"],
       "@helpers/*": ["app/shared/helpers/*"],
       "@pipes/*": ["app/shared/pipes/*"],
