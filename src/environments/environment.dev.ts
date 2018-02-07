@@ -1,5 +1,5 @@
 export const ENVIRONMENT = {
   production: false,
-  baseUrl: '/',
+  baseUrl: 'https://jsonplaceholder.typicode.com',
   env: 'DEV'
 };

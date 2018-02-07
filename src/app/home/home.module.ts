@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { GetPostService } from './services/get-post.service';
 
 import { HomeComponent } from './home.component';
 
@@ -6,6 +7,6 @@ import { HomeComponent } from './home.component';
   imports: [],
   exports: [HomeComponent],
   declarations: [HomeComponent],
-  providers: [],
+  providers: [GetPostService],
 })
 export class HomeModule { }

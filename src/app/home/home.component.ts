@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetPostService } from './services/get-post.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  responseServicePosts: Object;
+
+  constructor(private services: GetPostService) { }
 
   ngOnInit() {
+    this.getPosts();
+  }
+
+  public getPosts() {
+    this.services.getPost()
+      .subscribe(res => {
+        console.log(res);
+        this.responseServicePosts = res;
+      });
   }
 
 }

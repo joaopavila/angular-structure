@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import { ConnectionBackend, RequestMethod, RequestOptions, Request, RequestOptionsArgs, Http} from '@angular/http';
+import { ConnectionBackend, RequestMethod, RequestOptions, Request, RequestOptionsArgs, Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -20,7 +20,7 @@ export class InterceptedHttp extends Http {
     this.appHeaders = new HeadersHttp(backend, defaultOptions);
   }
 
-  request(url: string | Request, options?: RequestOptionsArgs): Observable<any> {
+  request(url: string | Request, options?: RequestOptionsArgs) {
 
     if (typeof url === 'string') {
       return this.get(this.baseUrl(url), options); // Recursion: transform url from String to Request
@@ -31,7 +31,7 @@ export class InterceptedHttp extends Http {
       });
   }
 
-  get(url: string, options?: RequestOptionsArgs): Observable<any> {
+  get(url: string, options?: RequestOptionsArgs) {
 
     return this.sendRequest({ method: RequestMethod.Get, url: this.baseUrl(url) }, options)
       .finally(() => {
@@ -39,30 +39,29 @@ export class InterceptedHttp extends Http {
       });
   }
 
-  post(url: string, body: string, options?: RequestOptionsArgs): Observable<any> {
+  post(url: string, body: string, options?: RequestOptionsArgs) {
     return this.sendRequest({ method: RequestMethod.Post, url: this.baseUrl(url), body: body }, options)
       .finally(() => {
         this.onEnd();
       });
   }
 
-  put(url: string, body: string, options?: RequestOptionsArgs): Observable<any> {
+  put(url: string, body: string, options?: RequestOptionsArgs) {
     return this.sendRequest({ method: RequestMethod.Put, url: this.baseUrl(url), body: body }, options)
       .finally(() => {
         this.onEnd();
     });
   }
 
-  delete(url: string, options?: RequestOptionsArgs): Observable<any> {
+  delete(url: string, options?: RequestOptionsArgs) {
     return this.sendRequest({ method: RequestMethod.Delete, url: url, body: '' }, options);
   }
 
   private baseUrl(req: string) {
-    const urlPattern =  API_URL + req;
-    return urlPattern;
+    return API_URL + req;
   }
 
-  private sendRequest(requestOptionArgs: RequestOptionsArgs, options?: RequestOptionsArgs): Observable<any> {
+  private sendRequest(requestOptionArgs: RequestOptionsArgs, options?: RequestOptionsArgs) {
     const requestOptions = new RequestOptions(requestOptionArgs);
     const request = new Request(this.appHeaders.HeadersBasic().merge(requestOptions));
 

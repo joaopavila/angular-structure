@@ -1,6 +1,8 @@
-import { XHRBackend, Http, RequestOptions } from '@angular/http';
+import { XHRBackend, RequestOptions } from '@angular/http';
 import { InterceptedHttp } from '../interceptor/http.interceptor';
 
-export function httpFactory(xhrBackend: XHRBackend, requestOptions: RequestOptions): Http {
-  return new InterceptedHttp(xhrBackend, requestOptions);
+export class HttpFactory {
+  public static injectHttpFactory(xhrBackend: XHRBackend, requestOptions: RequestOptions) {
+    return new InterceptedHttp(xhrBackend, requestOptions);
+  }
 }
